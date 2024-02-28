@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Display Site</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Black background */
+            color: #fff;
+        }
+
+        header {
+            background-color: #4a148c; /* Purple header */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .artwork {
+            position: relative;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .artwork img {
+            width: 100%;
+            height: auto;
+        }
+
+        .shine {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        footer {
+            background-color: #4a148c; /* Purple footer */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* About Me Section */
+        #about {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Art Gallery</h1>
+    </header>
+
+    <div id="about">
+        <img id="profile-pic" src="path/to/profile-pic.jpg" alt="Profile Picture">
+        <h2>About Me</h2>
+        <p>Write a brief description about yourself here. You can talk about your passion for art and your inspiration.</p>
+    </div>
+
+    <div id="gallery">
+        <!-- Artwork 1 -->
+        <div class="artwork">
+            <div class="shine"></div>
+            <img src="path/to/artwork1.jpg" alt="Artwork 1">
+            <p>Artwork 1 Description</p>
+        </div>
+
+        <!-- Artwork 2 -->
+        <div class="artwork">
+            <div class="shine"></div>
+            <img src="path/to/artwork2.jpg" alt="Artwork 2">
+            <p>Artwork 2 Description</p>
+        </div>
+
+        <!-- Add more artwork divs as needed -->
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Art Gallery</p>
+    </footer>
+
+</body>
+</html>
